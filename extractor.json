@@ -1,0 +1,384 @@
+{
+  "extractors": [
+    {
+      "title": "type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "type",
+      "extractor_config": {
+        "regex_value": "type=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "name of firewall",
+      "extractor_type": "split_and_index",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw",
+      "extractor_config": {
+        "index": 1,
+        "split_by": " "
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "protocoll",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "proto",
+      "extractor_config": {
+        "regex_value": "proto=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "source interface",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "srcIF",
+      "extractor_config": {
+        "regex_value": "srcIF=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "source ip",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "srcIP",
+      "extractor_config": {
+        "regex_value": "srcIP=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "source port",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "srcPort",
+      "extractor_config": {
+        "regex_value": "srcPort=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "source mac",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "srcMAG",
+      "extractor_config": {
+        "regex_value": "srcMAC=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "destination IP",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "dstIP",
+      "extractor_config": {
+        "regex_value": "dstIP=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "destination port",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "dstPort",
+      "extractor_config": {
+        "regex_value": "dstPort=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "destination service",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "dstService",
+      "extractor_config": {
+        "regex_value": "dstService=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "destination interface",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "destIF",
+      "extractor_config": {
+        "regex_value": "dstIF=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "rule",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "rule",
+      "extractor_config": {
+        "regex_value": "rule=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "info",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "info",
+      "extractor_config": {
+        "regex_value": "info=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "source nat",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "srcNAT",
+      "extractor_config": {
+        "regex_value": "srcNAT=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "duration",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "duration",
+      "extractor_config": {
+        "regex_value": "duration=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "destination nat",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "dstNAT",
+      "extractor_config": {
+        "regex_value": "dstNAT=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "count",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "count",
+      "extractor_config": {
+        "regex_value": "count=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "received bytes",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "receivedBytes",
+      "extractor_config": {
+        "regex_value": "receivedBytes=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "received Packets",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "receivedPackets",
+      "extractor_config": {
+        "regex_value": "receivedPackets=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "sentbytes",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "sentBytes",
+      "extractor_config": {
+        "regex_value": "sentBytes=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "user",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "user",
+      "extractor_config": {
+        "regex_value": "user=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "sent Packets",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "sentPackets",
+      "extractor_config": {
+        "regex_value": "sentPackets=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "protocol",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "protocol",
+      "extractor_config": {
+        "regex_value": "protocol=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "application",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "application",
+      "extractor_config": {
+        "regex_value": "application=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "content",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "content",
+      "extractor_config": {
+        "regex_value": "content=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "urlcat",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "urlcat",
+      "extractor_config": {
+        "regex_value": "urlcat=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "target",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "target",
+      "extractor_config": {
+        "regex_value": "target=([^\\|]*)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "2.2.0-SNAPSHOT"
+}
