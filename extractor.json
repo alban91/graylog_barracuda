@@ -29,7 +29,7 @@
       "condition_value": ""
     },
     {
-      "title": "protocoll",
+      "title": "protocol",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -63,7 +63,7 @@
       "order": 0,
       "cursor_strategy": "copy",
       "source_field": "message",
-      "target_field": "srcMAG",
+      "target_field": "srcMAC",
       "extractor_config": {
         "regex_value": "srcMAC=([^\\|]*)"
       },
